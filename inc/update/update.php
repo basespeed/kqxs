@@ -13,6 +13,8 @@ $myUpdateChecker->setAuthentication('01e9507759a7e74f85d7a54757fb0de9ebfd197c ')
 //Optional: Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('master');
 
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
+
 function myplugin_auto_update_setting_html( $html, $plugin_file, $plugin_data ) {
     if ( 'kqxs/kqxs.php' === $plugin_file ) {
         //$html = __( 'Auto-updates are not available for this plugin.', 'kqxs' );
