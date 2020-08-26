@@ -1,0 +1,64 @@
+li#toplevel_page_kqxs-inc-main img{
+    width: 18px;
+}
+.main_kqxs_wiew_shortcode h2{
+    color: red;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.main_kqxs_wiew_shortcode  li{
+    font-weight: bold;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.main_kqxs_wiew_shortcode  li span{
+    background: #1eb7ea;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 15px;
+}
+
+.main_kqxs_wiew_shortcode ul li strong{
+    font-weight: bold;
+    color: #000;
+    display: block;
+    width: 270px;
+}
+
+.sub_update{
+    background: red;
+    color: #FFF;
+    text-transform: uppercase;
+    border:none;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+.sub_update:hover{
+    background: #1EB7EA;
+}
+
+
+.sub_date_custom{
+    background: green;
+    color: #FFF;
+    text-transform: uppercase;
+    border:none;
+    outline: none;
+    padding: 5px 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-left: 15px;
+    border-radius: 12px;
+}
+.sub_date_custom:hover{
+    background: #1EB7EA;
+}
