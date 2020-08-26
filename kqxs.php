@@ -111,5 +111,4 @@ function getKQSX(){
 getKQSX();
 
 
-
-var_dump('update v1.1');
+var_dump('v1.1');

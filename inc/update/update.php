@@ -4,16 +4,8 @@ require dirname(__FILE__) . '/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/basespeed/kqxs/',
     get_template_directory() . '/functions.php',
-    'kqxs'
+    'master'
 );
-
-//Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('01e9507759a7e74f85d7a54757fb0de9ebfd197c ');
-
-//Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('master');
-
-$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 function myplugin_auto_update_setting_html( $html, $plugin_file, $plugin_data ) {
     if ( 'kqxs/kqxs.php' === $plugin_file ) {
