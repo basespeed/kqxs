@@ -1,17 +1,5 @@
 <?php
-require dirname(__FILE__) . '/Puc/v4p4/Factory.php';
-require dirname(__FILE__) . '/Puc/v4/Factory.php';
-require dirname(__FILE__) . '/Puc/v4p4/Autoloader.php';
-new Puc_v4p4_Autoloader();
-
-//Register classes defined in this file with the factory.
-//Puc_v4_Factory::addVersion('Plugin_UpdateChecker', 'Puc_v4p4_Plugin_UpdateChecker', '4.4');
-Puc_v4_Factory::addVersion('Theme_UpdateChecker', 'Puc_v4p4_Theme_UpdateChecker', '4.4');
-
-//Puc_v4_Factory::addVersion('Vcs_PluginUpdateChecker', 'Puc_v4p4_Vcs_PluginUpdateChecker', '4.4');
-Puc_v4_Factory::addVersion('Vcs_ThemeUpdateChecker', 'Puc_v4p4_Vcs_ThemeUpdateChecker', '4.4');
-
-Puc_v4_Factory::addVersion('GitHubApi', 'Puc_v4p4_Vcs_GitHubApi', '4.4');
+require dirname(__FILE__) . '/plugin-update-checker/plugin-update-checker.php';
 
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/basespeed/kqxs/',
@@ -19,6 +7,11 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'kqxs'
 );
 
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('01e9507759a7e74f85d7a54757fb0de9ebfd197c ');
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
 
 function myplugin_auto_update_setting_html( $html, $plugin_file, $plugin_data ) {
     if ( 'kqxs/kqxs.php' === $plugin_file ) {
