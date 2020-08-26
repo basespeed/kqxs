@@ -1,7 +1,7 @@
 <?php
-require DIR . 'inc/update/Puc/v4p4/Factory.php';
-require DIR . 'inc/update/Puc/v4/Factory.php';
-require DIR . 'inc/update/Puc/v4p4/Autoloader.php';
+require dirname(__FILE__) . '/Puc/v4p4/Factory.php';
+require dirname(__FILE__) . '/Puc/v4/Factory.php';
+require dirname(__FILE__) . '/Puc/v4p4/Autoloader.php';
 new Puc_v4p4_Autoloader();
 
 //Register classes defined in this file with the factory.
@@ -18,12 +18,6 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     get_template_directory() . '/functions.php',
     'kqxs'
 );
-
-//Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('0f32c4b2e81d900dbb6209f32859ce3ab5a65566');
-
-//Optional: Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('master');
 
 
 function myplugin_auto_update_setting_html( $html, $plugin_file, $plugin_data ) {

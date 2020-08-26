@@ -5,7 +5,7 @@
  * Description:   Design by Takecare
  * Author:        Thanh Tung
  * Author URI:    https://takecare.vn
- * Version:       1.0
+ * Version:       1.1
  * Text Domain:   kqxs
  *
  * @package   kqxs
@@ -13,7 +13,7 @@
  * @author    Thanh Tung
  * @copyright Copyright (c) 2020, Thanh Tung.
  * @license   https://takecare.vn/gioi-thieu
- * @since     1.0
+ * @since     1.1
  */
 
 class KQSX{
