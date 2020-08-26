@@ -13,7 +13,7 @@
  * @author    Thanh Tung
  * @copyright Copyright (c) 2020, Thanh Tung.
  * @license   https://takecare.vn/gioi-thieu
- * @since     1.0
+ * @since     1.1
  */
 
 class KQSX{
@@ -110,6 +110,6 @@ function getKQSX(){
 
 getKQSX();
 
+var_dump('check update plugin v.1.1');
 
 
-var_dump('test check update plugin');
