@@ -7,7 +7,7 @@
  * Released under the MIT license. See license.txt for details.
  */
 
-require DIR . 'inc/update/Puc/v4p4/Factory.php';
+/*require DIR . 'inc/update/Puc/v4p4/Factory.php';
 require DIR . 'inc/update/Puc/v4/Factory.php';
 require DIR . 'inc/update/Puc/v4p4/Autoloader.php';
 new Puc_v4p4_Autoloader();
@@ -25,5 +25,19 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/basespeed/kqxs/',
     get_template_directory() . '/functions.php',
     'kqxs'
+);*/
+
+
+require DIR . 'inc/update/plugin-update-checker/plugin-update-checker.php';
+
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/basespeed/kqxs/',
+    get_template_directory() . '/functions.php',
+    'kqxs'
 );
 
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('0f32c4b2e81d900dbb6209f32859ce3ab5a65566');
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');

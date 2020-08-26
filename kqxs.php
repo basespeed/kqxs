@@ -110,6 +110,6 @@ function getKQSX(){
 
 getKQSX();
 
-var_dump('check update plugin v.1.1');
 
+var_dump('test update v1.1');
 
