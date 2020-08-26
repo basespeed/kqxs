@@ -7,9 +7,9 @@
  * Released under the MIT license. See license.txt for details.
  */
 
-require dirname(__FILE__) . '/Puc/v4p4/Factory.php';
-require dirname(__FILE__) . '/Puc/v4/Factory.php';
-require dirname(__FILE__) . '/Puc/v4p4/Autoloader.php';
+require DIR . '/inc/update/Puc/v4p4/Factory.php';
+require DIR . '/inc/update/Puc/v4/Factory.php';
+require DIR . '/inc/update/Puc/v4p4/Autoloader.php';
 new Puc_v4p4_Autoloader();
 
 //Register classes defined in this file with the factory.
